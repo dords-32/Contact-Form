@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="flex-container">
+        <section class="card">
+            <h1 class="title">Contact Us</h1>
+            <form action="" method="post" id="form" aria-describedby="state">
+                <div class="wrapper">
+
+                    <div class="inputWrapper">
+                        <div class="wrap">
+                            <label for="firstName" class="required">First Name</label>
+                            <input
+                                id="firstName"
+                                name="firstName"
+                                type="text"
+                                autocomplete="given-name"
+                                aria-describedby="firstNameError"
+                                class="data">
+                            <p id="firstNameError" aria-live="polite" class="error"></p>
+                        </div>
+                        <div class="wrap">
+                            <label for="lastName" class="required">Last Name</label>
+                            <input
+                                id="lastName"
+                                name="lastName"
+                                type="text"
+                                autocomplete="family-name"
+                                aria-describedby="lastNameError"
+                                class="data">
+                            <p id="lastNameError" aria-live="polite" class="error"></p>
+                        </div>
+                    </div>
+                        
+                    <div class="wrap">
+                        <label for="email" class="required">Email Address</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            aria-describedby="emailError"
+                            class="data">
+                        <p id="emailError" aria-live="polite" class="error"></p>
+                    </div>
+                        
+                    <fieldset class="wrapper wrap">
+                        <legend class="label required">Query Type</legend>
+
+                        <div class="inputWrapper">
+                            <input
+                                id="queryTypeA"
+                                name="queryType"
+                                type="radio"
+                                value="1"
+                                aria-describedby="queryTypeError"
+                                class="data sr-only">
+                            <label for="queryTypeA" class="input input--label">General Enquiry</label>
+
+                            <input
+                                id="queryTypeB"
+                                name="queryType"
+                                type="radio"
+                                value="2"
+                                aria-describedby="queryTypeError"
+                                class="data sr-only">
+                            <label for="queryTypeB" class="input input--label">Support Request</label>
+                        </div>
+                        <p id="queryTypeError" aria-live="polite" class="error"></p>
+                    </fieldset>
+
+                    <div class="wrap">
+                        <label for="message" class="required">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="8"
+                            aria-describedby="messageError"
+                            class="data input"></textarea>
+                        <p id="messageError" aria-live="polite" class="error"></p>
+                    </div>
+                </div>
+
+                <div class="wrapper wrap">
+                    <input
+                        id="consent"
+                        name="consent"
+                        type="checkbox"
+                        aria-describedby="consentError"
+                        class="data sr-only">
+                    <label for="consent">I consent to being contacted by the team</label>
+                    <p id="consentError" aria-live="polite" class="error"></p>
+                </div>
+
+                <div class="wrapper wrap">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+
+            <div id="success" class="success">
+                <h2 class="success__title">Message Sent!</h2>
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+            </div>
+        </section>
+    </main>
+
+  <script src="app.js" type="module"></script>
+
+</body>
+</html>
